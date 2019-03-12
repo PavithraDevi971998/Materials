@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+<bean id="acc1" class="com.cts.model.Account">
+<property name="accountNo" value="123654"></property>
+<property name="holdername" value="pavithra"></property>
+</bean>
+
+<bean id="acc2" class="com.cts.model.Account">
+<property name="accountNo" value="789654"></property>
+<property name="holdername" value="rudhra"></property>
+</bean>
+<bean id="acc3" class="com.cts.model.Account">
+<property name="accountNo" value="852963"></property>
+<property name="holdername" value="kalai"></property>
+</bean>
+<bean id="emp" class="com.cts.model.Employee">
+<property name="employeeId" value="789654"></property>
+<property name="employeeName" value="pavi"></property>
+<property name="emailId" value="pavi@a.in"></property>
+<property name="contactNo" value="789654"></property>
+<property name="account">
+<list>
+<ref bean="acc1"/>
+<ref bean="acc2"/>
+<ref bean="acc3"/>
+</list></property>
+</bean>
+</beans>
